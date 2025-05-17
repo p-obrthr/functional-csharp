@@ -1,0 +1,10 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using FunctionalCsharp.Core.Services
+
+<CounterComponent Counters="@_counters"
+                  OnIncrement="Increment"
+                  OnDecrement="Decrement" />
+
+<p>Total: @CounterService.GetSum(_counters)</p>
+<button @onclick="AddCounter">New</button>

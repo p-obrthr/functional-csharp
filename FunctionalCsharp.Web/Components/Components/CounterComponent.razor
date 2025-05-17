@@ -1,0 +1,10 @@
+@if (Helpers.Unconstruct<Counter>(Counters) is (var head, var tail))
+{
+    <p>@($"Counter {head.Id}: {head.Value}")</p>
+    <button @onclick="() => Increment(head.Id)">+</button>
+    <button @onclick="() => Decrement(head.Id)">-</button>
+    <hr />
+    <CounterComponent Counters="tail"
+                      OnIncrement="OnIncrement"
+                      OnDecrement="OnDecrement" />
+}
