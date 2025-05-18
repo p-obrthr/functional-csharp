@@ -10,6 +10,13 @@ The aim of this project is to emphasize functional programming principles by min
 
 ### Project Structure
 
-- **FunctionalCsharp.Core** – Contains the primary logic and core classes  
-- **FunctionalCsharp.Tests** – Implements tests for the core logic  
-- **FunctionalCsharp.Web** – Provides an interface for user interaction
+- **FunctionalCsharp.Core** – *ClassLibrary*, contains the primary logic and core classes  
+- **FunctionalCsharp.Tests** – *TestProject*, implements tests for the core logic  
+- **FunctionalCsharp.Web** – *Blazor*, provides a GUI for example user interaction
+
+### Overview
+
+| Concepts                               | Core                              | Web                                                 | 
+|:---------------------------------------|:----------------------------------|:----------------------------------------------------|
+| pure function, immutability, recursion | `CounterService.cs`, `Helpers.cs` | `Counter.razor(.cs)`, `CounterComponent.razor(.cs)` |
+| option (some/none), map                | `Option.cs`                       | `Greeting.razor(.cs)`                               | 
